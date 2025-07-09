@@ -42,6 +42,7 @@ export interface AutonomousContext {
     reasons: string[];
     suggestions: string[];
   };
+  worldContext?: any;
 }
 
 export class AutonomousPlanner {
@@ -228,13 +229,24 @@ export class AutonomousPlanner {
   private getSystemPrompt(): string {
     return `You are an advanced autonomous web scraping agent with deep understanding of web page structures and semantic HTML. Your job is to make intelligent, context-aware decisions about how to interact with web pages to extract specific data.
 
+CRITICAL DECISION RULES:
+1. **DEFAULT TO SCRAPE**: If you can see the target data in the HTML, choose "scrape" immediately
+2. **ANALYZE SPARINGLY**: Only use "analyze" if the page structure is completely unclear (limit to 1-2 times max)
+3. **BE DECISIVE**: Don't analyze repeatedly - make extraction attempts based on available information
+
 You can perform these actions:
-- scrape: Extract data using intelligent selector generation
+- scrape: Extract data using intelligent selector generation (USE THIS MOST)
 - click: Click on buttons, links, or interactive elements
 - fill: Fill out form fields
 - navigate: Navigate to a different page
 - wait: Wait for dynamic content to load
-- analyze: Analyze page structure and content patterns
+- analyze: Analyze page structure (USE SPARINGLY - max 1-2 times)
+
+SCRAPING STRATEGY:
+- For news sites: Look for article titles in <h1>, <h2>, .title, .headline, .story-link
+- For ecommerce: Look for product names in .product-title, .product-name, .item-title
+- For social: Look for post content in .post, .tweet, .status
+- Always try multiple selectors in one scrape action
 
 You must respond with a JSON object containing:
 {
@@ -252,13 +264,14 @@ You must respond with a JSON object containing:
 }
 
 Key principles:
-1. **Semantic Understanding**: Prioritize semantic HTML elements over styling-based selectors
-2. **Content Type Awareness**: Adapt strategy based on page type (news, ecommerce, social, etc.)
-3. **Failure Learning**: Use previous failures to inform better approaches
-4. **Validation Focus**: Ensure extracted data actually matches the intended targets
-5. **Robustness**: Generate selectors that work across similar page structures
+1. **BE DECISIVE**: Choose "scrape" when you can identify potential selectors
+2. **SEMANTIC UNDERSTANDING**: Prioritize semantic HTML elements over styling-based selectors
+3. **CONTENT TYPE AWARENESS**: Adapt strategy based on page type (news, ecommerce, social, etc.)
+4. **FAILURE LEARNING**: Use previous failures to inform better approaches
+5. **VALIDATION FOCUS**: Ensure extracted data actually matches the intended targets
+6. **ROBUSTNESS**: Generate selectors that work across similar page structures
 
-Always provide your confidence level and reasoning based on the semantic analysis provided.`;
+REMEMBER: Your goal is to EXTRACT DATA, not endlessly analyze. If you see potential selectors, use them!`;
   }
 
   private getSequenceSystemPrompt(): string {
@@ -693,6 +706,90 @@ For each target, provide the best selector plus 2-3 alternatives with reasoning.
     }
     
     return analysis.join('\n');
+  }
+
+  async generateSelfReflectionNote(
+    context: AutonomousContext,
+    decision: AutonomousDecision,
+    result: { success: boolean; data?: any; error?: string }
+  ): Promise<string> {
+    try {
+      const prompt = this.buildReflectionPrompt(context, decision, result);
+      
+      const response = await this.openai.chat.completions.create({
+        model: 'gpt-4o',
+        messages: [
+          {
+            role: 'system',
+            content: this.getReflectionSystemPrompt()
+          },
+          {
+            role: 'user',
+            content: prompt
+          }
+        ],
+        temperature: 0.1,
+        max_tokens: 300
+      });
+
+      return response.choices[0]?.message?.content || 'No reflection generated';
+    } catch (error) {
+      return `Reflection failed: ${error instanceof Error ? error.message : 'Unknown error'}`;
+    }
+  }
+
+  private getReflectionSystemPrompt(): string {
+    return `You are reflecting on a web scraping action you just performed. Analyze what happened and write a concise note about:
+
+1. **Why it succeeded/failed** - What about the page structure or selector made it work/not work?
+2. **What you learned** - What patterns or insights can be applied to similar pages?
+3. **What you would do differently** - How would you approach this differently next time?
+
+Write a clear, actionable note that will help you make better decisions in the future. Focus on specific technical insights, not general observations.
+
+Example good reflection:
+"SUCCESS: The .titleline selector worked because Hacker News consistently uses this class for story titles. The semantic structure was clear with each story in a numbered list. For similar news sites, look for repeated list items with consistent class names for titles."
+
+Example bad reflection:
+"It worked because the selector was right."
+
+Keep your reflection under 200 words and focus on actionable insights.`;
+  }
+
+  private buildReflectionPrompt(
+    context: AutonomousContext,
+    decision: AutonomousDecision,
+    result: { success: boolean; data?: any; error?: string }
+  ): string {
+    const outcome = result.success ? 'SUCCESS' : 'FAILURE';
+    const dataInfo = result.data ? `Extracted ${Object.keys(result.data).length} data items` : 'No data extracted';
+    const errorInfo = result.error ? `Error: ${result.error}` : '';
+
+    return `
+REFLECTION REQUEST: Write a note about why this action ${outcome.toLowerCase()}.
+
+CONTEXT:
+- Goal: ${context.goal}
+- URL: ${context.url}
+- Previous attempts: ${context.previousAttempts.join(', ') || 'None'}
+
+ACTION TAKEN:
+- Decision: ${decision.action}
+- Reasoning: ${decision.reasoning}
+- Confidence: ${decision.confidence}
+- Selector used: ${decision.parameters.selector || 'None'}
+- Strategy: ${decision.parameters.strategy || 'None'}
+
+OUTCOME: ${outcome}
+- ${dataInfo}
+- ${errorInfo}
+
+PAGE STRUCTURE:
+- Content type: ${context.pageStructure?.contentType || 'Unknown'}
+- Title: ${context.pageStructure?.title || 'Unknown'}
+- Elements: ${context.pageStructure?.headings || 0} headings, ${context.pageStructure?.links || 0} links
+
+Write a reflection note that explains why this ${outcome.toLowerCase()} and what you learned for future similar situations.`;
   }
 
   async validateExtractionResult(context: AutonomousContext, extractedData: Record<string, any>): Promise<{

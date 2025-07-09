@@ -16,6 +16,16 @@ export interface FeedbackEntry {
   elementAttributes?: string; // JSON string
   htmlContext: string;
   confidence?: number;
+  // Rich learning data
+  reflectionNote?: string; // AI's self-reflection on why it succeeded/failed
+  aiReasoning?: string; // AI's original reasoning for choosing this selector
+  alternativeSelectors?: string; // JSON array of alternative selectors considered
+  pageStructure?: string; // JSON object with page analysis
+  extractionStrategy?: string; // Strategy used (semantic, hierarchical, etc.)
+  expectedDataType?: string; // What type of data the AI expected to find
+  actualDataExtracted?: string; // What data was actually extracted
+  domContext?: string; // Surrounding DOM context where selector was applied
+  aiDecisionConfidence?: number; // AI's confidence in the decision
 }
 
 export interface SelectorPattern {
@@ -71,7 +81,16 @@ export class LearningDatabase {
         elementText TEXT,
         elementAttributes TEXT,
         htmlContext TEXT NOT NULL,
-        confidence REAL
+        confidence REAL,
+        reflectionNote TEXT,
+        aiReasoning TEXT,
+        alternativeSelectors TEXT,
+        pageStructure TEXT,
+        extractionStrategy TEXT,
+        expectedDataType TEXT,
+        actualDataExtracted TEXT,
+        domContext TEXT,
+        aiDecisionConfidence REAL
       )
     `);
 
@@ -345,6 +364,70 @@ export class LearningDatabase {
     `).all() as FeedbackEntry[];
 
     return { positive, negative };
+  }
+
+  /**
+   * Get all selector patterns for JSON export
+   */
+  getAllSelectorPatterns(): SelectorPattern[] {
+    return this.db.prepare(`
+      SELECT * FROM selector_patterns
+      ORDER BY confidence DESC, successCount DESC
+    `).all() as SelectorPattern[];
+  }
+
+  /**
+   * Get all interaction patterns for JSON export
+   */
+  getAllInteractionPatterns(): InteractionPattern[] {
+    return this.db.prepare(`
+      SELECT * FROM interaction_patterns
+      ORDER BY confidence DESC, successCount DESC
+    `).all() as InteractionPattern[];
+  }
+
+  /**
+   * Get recent feedback entries for learning analysis
+   */
+  getRecentFeedback(limit: number = 1000): FeedbackEntry[] {
+    return this.db.prepare(`
+      SELECT * FROM feedback
+      ORDER BY timestamp DESC
+      LIMIT ?
+    `).all(limit) as FeedbackEntry[];
+  }
+
+  /**
+   * Get learning statistics
+   */
+  getLearningStats(): {
+    totalFeedback: number;
+    successRate: number;
+    totalPatterns: number;
+    avgConfidence: number;
+  } {
+    const totalFeedback = this.db.prepare(`
+      SELECT COUNT(*) as count FROM feedback
+    `).get() as { count: number };
+
+    const successRate = this.db.prepare(`
+      SELECT COUNT(*) as count FROM feedback WHERE success = 1
+    `).get() as { count: number };
+
+    const totalPatterns = this.db.prepare(`
+      SELECT COUNT(*) as count FROM selector_patterns
+    `).get() as { count: number };
+
+    const avgConfidence = this.db.prepare(`
+      SELECT AVG(confidence) as avg FROM selector_patterns
+    `).get() as { avg: number };
+
+    return {
+      totalFeedback: totalFeedback.count,
+      successRate: totalFeedback.count > 0 ? successRate.count / totalFeedback.count : 0,
+      totalPatterns: totalPatterns.count,
+      avgConfidence: avgConfidence.avg || 0
+    };
   }
 
   close(): void {

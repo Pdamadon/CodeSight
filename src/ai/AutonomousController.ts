@@ -6,6 +6,8 @@ import { Logger } from '../monitoring/Logger.js';
 import { Monitor } from '../monitoring/Monitor.js';
 import { ErrorHandler } from '../errors/ErrorHandler.js';
 import { ScrapingPatterns } from '../knowledge/ScrapingPatterns.js';
+import { WorldModel } from '../knowledge/WorldModel.js';
+import { getDatabaseConfig } from '../config/database.js';
 
 export interface AutonomousResult {
   success: boolean;
@@ -25,15 +27,40 @@ export class AutonomousController {
   private planner: AutonomousPlanner;
   private domAnalyzer: DOMAnalyzer;
   private learningSystem: LearningSystem;
+  private worldModel: WorldModel;
   private logger: Logger;
   private monitor: Monitor;
+  private openAIAvailable: boolean = true;
 
   constructor(learningSystem: LearningSystem) {
     this.planner = new AutonomousPlanner();
     this.domAnalyzer = new DOMAnalyzer();
     this.learningSystem = learningSystem;
+    this.worldModel = new WorldModel(getDatabaseConfig());
     this.logger = Logger.getInstance();
     this.monitor = Monitor.getInstance();
+    
+    // Check if OpenAI is available
+    this.checkOpenAIAvailability();
+    
+    // Initialize world model
+    this.initializeWorldModel();
+  }
+
+  private async initializeWorldModel(): Promise<void> {
+    try {
+      await this.worldModel.initialize();
+      this.logger.info('WorldModel initialized with persistent storage');
+    } catch (error) {
+      this.logger.error('Failed to initialize WorldModel, falling back to in-memory', error as Error);
+    }
+  }
+
+  private checkOpenAIAvailability(): void {
+    if (!process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY.length < 10) {
+      this.openAIAvailable = false;
+      this.logger.info('OpenAI API key not available, using pattern-based scraping');
+    }
   }
 
   async executeAutonomousGoal(
@@ -64,8 +91,52 @@ export class AutonomousController {
         // Analyze current page state
         const context = await this.buildContext(page, goal, currentData, previousAttempts);
         
-        // Make autonomous decision
-        const decision = await this.planner.makeAutonomousDecision(context);
+        // Make autonomous decision with fallback
+        let decision;
+        try {
+          decision = await this.planner.makeAutonomousDecision(context);
+        } catch (error) {
+          this.logger.warn('OpenAI decision failed, using proven pattern fallback', { error: (error as Error).message });
+          
+          // Use proven patterns as fallback when OpenAI fails
+          const domain = new URL(context.url).hostname;
+          const smartSelectors = ScrapingPatterns.generateSmartSelectors(context.goal, domain, context.pageStructure);
+          
+          decision = {
+            action: 'scrape' as const,
+            reasoning: 'OpenAI unavailable - using proven selector patterns from working scrapers',
+            confidence: 0.8,
+            parameters: {
+              selector: smartSelectors[0] || this.getDefaultSelectorForGoal(context.goal),
+              strategy: 'semantic',
+              alternatives: smartSelectors.slice(1, 5)
+            }
+          };
+        }
+        
+        // Prevent too many analyze actions in a row
+        const recentAnalyzeCount = previousAttempts.slice(-3).filter(attempt => attempt.includes('analyze')).length;
+        if (decision.action === 'analyze' && recentAnalyzeCount >= 2) {
+          this.logger.warn('Too many analyze attempts, forcing scrape action', { 
+            recentAnalyzeCount,
+            stepIndex 
+          });
+          
+          // Force a scrape action with proven patterns
+          const domain = new URL(context.url).hostname;
+          const smartSelectors = ScrapingPatterns.generateSmartSelectors(context.goal, domain, context.pageStructure);
+          
+          decision = {
+            action: 'scrape' as const,
+            reasoning: 'Forced scrape after too many analyze attempts - using proven selector patterns',
+            confidence: 0.7,
+            parameters: {
+              selector: smartSelectors[0] || this.getDefaultSelectorForGoal(context.goal),
+              strategy: 'semantic',
+              alternatives: smartSelectors.slice(1, 4)
+            }
+          };
+        }
         
         this.logger.info('Autonomous decision made', {
           step: stepIndex + 1,
@@ -117,6 +188,24 @@ export class AutonomousController {
         executionTime: result.executionTime
       });
 
+      // Ingest successful results into world model
+      if (result.success && Object.keys(currentData).length > 0) {
+        try {
+          await this.worldModel.ingestScrapedData({
+            url: page.url(),
+            domain: new URL(page.url()).hostname,
+            timestamp: Date.now(),
+            extractedData: currentData,
+            confidence: result.confidence,
+            goal,
+            sessionId: `autonomous_${Date.now()}`
+          });
+          this.logger.info('Scraped data ingested into world model');
+        } catch (error) {
+          this.logger.warn('Failed to ingest data into world model', { error: (error as Error).message });
+        }
+      }
+
       return result;
 
     } catch (error) {
@@ -159,13 +248,30 @@ export class AutonomousController {
       }));
     });
 
+    // Analyze page structure for context
+    const pageStructure = this.analyzePageStructure(html, url);
+
+    // Get previous learning data for this URL and goal
+    const previousLearning = await this.getPreviousLearningData(url, goal);
+
+    // Get rich context from world model
+    let worldContext = null;
+    try {
+      worldContext = await this.worldModel.getScrapingContext(url, goal);
+    } catch (error) {
+      this.logger.warn('Failed to get world model context', { error: (error as Error).message });
+    }
+
     return {
       url,
       goal,
       currentHtml: html,
-      previousAttempts,
+      previousAttempts: [...previousAttempts, ...previousLearning.attempts],
       availableElements,
-      currentData
+      currentData,
+      failureAnalysis: previousLearning.failureAnalysis,
+      pageStructure,
+      worldContext
     };
   }
 
@@ -247,22 +353,63 @@ export class AutonomousController {
     // Try to extract data using selectors
     for (const [target, selector] of Object.entries(selectors)) {
       try {
-        const element = await page.$(selector);
-        if (element) {
-          const text = await element.textContent();
-          const href = await element.getAttribute('href');
-          const src = await element.getAttribute('src');
-          const value = await element.getAttribute('value');
-          
-          data[target] = {
-            text: text?.trim(),
-            href,
-            src,
-            value,
-            selector
-          };
+        // Check if this is a plural target (multiple elements expected)
+        const isPlural = target.toLowerCase().includes('titles') || 
+                        target.toLowerCase().includes('stories') ||
+                        target.toLowerCase().includes('items') ||
+                        target.toLowerCase().includes('links');
+        
+        if (isPlural) {
+          // Extract multiple elements
+          const elements = await page.$$(selector);
+          if (elements.length > 0) {
+            const extractedItems = [];
+            
+            for (const element of elements.slice(0, 30)) { // Limit to first 30 items
+              const text = await element.textContent();
+              const href = await element.getAttribute('href');
+              const src = await element.getAttribute('src');
+              const value = await element.getAttribute('value');
+              
+              if (text?.trim() && text.trim().length > 1) {
+                extractedItems.push({
+                  text: text.trim(),
+                  href,
+                  src,
+                  value
+                });
+              }
+            }
+            
+            data[target] = {
+              items: extractedItems,
+              count: extractedItems.length,
+              selector,
+              text: extractedItems.map(item => item.text).join(', ')
+            };
+          }
+        } else {
+          // Extract single element
+          const element = await page.$(selector);
+          if (element) {
+            const text = await element.textContent();
+            const href = await element.getAttribute('href');
+            const src = await element.getAttribute('src');
+            const value = await element.getAttribute('value');
+            
+            data[target] = {
+              text: text?.trim(),
+              href,
+              src,
+              value,
+              selector
+            };
+          }
+        }
 
-          // Record successful extraction for learning
+        // Record successful extraction for learning
+        if (data[target]) {
+          const extractedData = data[target];
           await this.learningSystem.recordSuccess(
             context.url,
             target,
@@ -271,12 +418,22 @@ export class AutonomousController {
             {
               html: html.substring(0, 1000),
               position: 0,
-              elementText: text?.trim(),
+              elementText: extractedData.text || '',
               elementAttributes: { 
-              href: href || undefined, 
-              src: src || undefined, 
-              value: value || undefined 
-            }
+                href: extractedData.href || undefined, 
+                src: extractedData.src || undefined, 
+                value: extractedData.value || undefined,
+                count: extractedData.count || 1
+              },
+              // Rich learning data
+              aiReasoning: decision.reasoning,
+              alternativeSelectors: decision.parameters.alternatives || [],
+              pageStructure: context.pageStructure,
+              extractionStrategy: decision.parameters.strategy || 'unknown',
+              expectedDataType: context.goal,
+              actualDataExtracted: extractedData,
+              domContext: html.substring(0, 2000),
+              aiDecisionConfidence: decision.confidence
             }
           );
         }
@@ -292,7 +449,16 @@ export class AutonomousController {
           'scrape',
           {
             html: html.substring(0, 1000),
-            position: 0
+            position: 0,
+            // Rich learning data
+            aiReasoning: decision.reasoning,
+            alternativeSelectors: decision.parameters.alternatives || [],
+            pageStructure: context.pageStructure,
+            extractionStrategy: decision.parameters.strategy || 'unknown',
+            expectedDataType: context.goal,
+            actualDataExtracted: null,
+            domContext: html.substring(0, 2000),
+            aiDecisionConfidence: decision.confidence
           }
         );
       }
@@ -640,5 +806,57 @@ export class AutonomousController {
                               context.goal.toLowerCase().split(' ').some(word => textLower.includes(word));
     
     return hasRelevantContent;
+  }
+
+  private getDefaultSelectorForGoal(goal: string): string {
+    const goalLower = goal.toLowerCase();
+    
+    // Use patterns from your proven scrapers
+    if (goalLower.includes('title') || goalLower.includes('headline')) {
+      return 'h1, h2, .title, .headline, .story-link, .titleline a';
+    }
+    
+    if (goalLower.includes('product') || goalLower.includes('item')) {
+      return '.product-title, .product-name, .item-title, .fr-product-tile-name';
+    }
+    
+    if (goalLower.includes('price') || goalLower.includes('cost')) {
+      return '.price, .product-price, .cost, [class*="price"]';
+    }
+    
+    if (goalLower.includes('article') || goalLower.includes('content')) {
+      return 'article, .content, .post, .entry-content';
+    }
+    
+    // Default fallback
+    return 'h1, h2, .title, .headline, .product-title, .story-link';
+  }
+
+  private async getPreviousLearningData(url: string, goal: string): Promise<{
+    attempts: string[];
+    failureAnalysis: any;
+  }> {
+    try {
+      // Simple fallback - just return empty data for now
+      // TODO: Implement proper learning system integration
+      return {
+        attempts: [],
+        failureAnalysis: {
+          failedSelectors: [],
+          commonFailures: [],
+          successfulStrategies: []
+        }
+      };
+    } catch (error) {
+      this.logger.warn('Failed to get previous learning data', { error, url, goal });
+      return {
+        attempts: [],
+        failureAnalysis: {
+          failedSelectors: [],
+          commonFailures: [],
+          successfulStrategies: []
+        }
+      };
+    }
   }
 }

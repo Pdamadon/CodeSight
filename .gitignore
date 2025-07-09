@@ -1,0 +1,403 @@
+# CodeSight - Git Ignore File
+# Protect all private information and sensitive data
+
+# Environment Variables & API Keys
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.*
+
+# Database & Storage
+*.db
+*.sqlite
+*.sqlite3
+data/
+logs/
+*.log
+
+# API Keys and Secrets
+**/config/secrets.js
+**/config/secrets.ts
+**/config/keys.js
+**/config/keys.ts
+
+# MongoDB Connection Strings
+mongodb.config.js
+mongodb.config.ts
+
+# Pinecone API Keys
+pinecone.config.js
+pinecone.config.ts
+
+# OpenAI API Keys
+openai.config.js
+openai.config.ts
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage
+.grunt
+
+# Bower dependency directory
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons
+build/Release
+
+# Dependency directories
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# TypeScript
+*.js.map
+*.d.ts.map
+
+# Build outputs
+dist/
+build/
+out/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Expo
+.expo/
+.expo-shared/
+
+# React Native
+.react-native/
+
+# Mobile Client specific
+mobile-client/node_modules/
+mobile-client/.expo/
+mobile-client/dist/
+mobile-client/.expo-shared/
+
+# Test results
+test-results/
+test-reports/
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Local configuration files
+config.local.js
+config.local.ts
+local.config.js
+local.config.ts
+
+# Private scrapers and test data
+scrapers copy/
+test_data/
+private_tests/
+
+# Results and outputs (may contain scraped data)
+results/
+output/
+scraped_data/
+*.json.bak
+
+# Screenshots and images from scraping
+screenshots/
+*.png
+*.jpg
+*.jpeg
+*.gif
+!assets/icon.png
+!assets/splash*.png
+!assets/adaptive-icon.png
+!assets/favicon.png
+
+# Database files
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Monitoring and logging
+logs/
+*.log
+*.log.*
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Local history
+.history/
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Vim
+*.swp
+*.swo
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# macOS
+.AppleDouble
+.LSOverride
+Icon?
+
+# Windows
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Private documentation
+PRIVATE_README.md
+INTERNAL_DOCS.md
+SETUP_NOTES.md
+
+# API documentation with sensitive info
+api_docs_private/
+internal_api/
+
+# Deployment scripts with credentials
+deploy.sh
+deploy.js
+deploy.ts
+deployment/
+
+# Docker with potential secrets
+docker-compose.override.yml
+.dockerignore
+
+# Kubernetes configs with secrets
+k8s/
+kubernetes/
+*.kubeconfig
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# AWS credentials
+.aws/
+aws-config.json
+
+# Other cloud provider configs
+.gcp/
+.azure/
+
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+
+# GPG keys
+*.gpg
+*.asc
+
+# SSH keys
+id_rsa
+id_ed25519
+*.pub
+
+# Application specific sensitive files
+user_sessions/
+auth_tokens/
+refresh_tokens/
+
+# Email configurations
+mail.config.js
+mail.config.ts
+smtp.config.js
+smtp.config.ts
+
+# Analytics and tracking
+analytics.config.js
+analytics.config.ts
+tracking/
+
+# A/B testing configs
+experiments/
+feature_flags/
+
+# Rate limiting and security configs
+security.config.js
+security.config.ts
+rate_limits.config.js
+rate_limits.config.ts
+# Mobile Client Additional Protections
+mobile-client/.env
+mobile-client/.env.local
+mobile-client/.env.development
+mobile-client/.env.production
+mobile-client/ios/
+mobile-client/android/
+mobile-client/web-build/
+mobile-client/.expo-shared/
+
+# React Native Metro
+mobile-client/metro.config.js.bak
+mobile-client/.metro-health-check*
+
+# iOS specific
+mobile-client/ios/Pods/
+mobile-client/ios/build/
+mobile-client/ios/*.xcworkspace/xcuserdata/
+mobile-client/ios/*.xcodeproj/xcuserdata/
+
+# Android specific
+mobile-client/android/build/
+mobile-client/android/gradle/
+mobile-client/android/app/build/
+mobile-client/android/app/release/
+
+# Expo specific
+mobile-client/dist/
+mobile-client/web-build/
+mobile-client/bare-expo-*
+
+# Additional security for any scraped content
+scraped_content/
+scraping_results/
+private_data/
+user_data/
+session_data/
+EOF < /dev/null

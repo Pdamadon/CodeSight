@@ -37,7 +37,7 @@ export class ScrapingPatterns {
         selectors: ['.product-item', '.product-card', '.fr-product-tile'],
         priority: 2,
         description: 'Secondary product container selectors',
-        validator: (el) => el.textContent.length > 10
+        validator: (el) => (el.textContent?.length || 0) > 10
       },
       {
         selectors: ['[class*="ProductTile"]', '[class*="product"]', '[class*="Product"]'],
@@ -55,7 +55,7 @@ export class ScrapingPatterns {
         selectors: ['a[href*="/products/"]'],
         priority: 5,
         description: 'URL-based product link fallback',
-        validator: (el) => el.textContent.trim().length > 0
+        validator: (el) => (el.textContent?.trim().length || 0) > 0
       }
     ];
   }
@@ -173,7 +173,7 @@ export class ScrapingPatterns {
             selectors: ['.titleline > a', '.storylink'],
             extractor: (el) => el.textContent?.trim() || '',
             validator: (text) => text.length > 5 && !text.includes('comments')
-          }
+          } as ExtractionPattern
         ]
       }
     ];
@@ -294,6 +294,6 @@ Example failed extraction:
 `
     };
     
-    return examples[contentType] || examples.product;
+    return examples[contentType as keyof typeof examples] || examples.product;
   }
 }
