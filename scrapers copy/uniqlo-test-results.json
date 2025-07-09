@@ -1,0 +1,202 @@
+[
+  {
+    "name": "My Account",
+    "price": "",
+    "image": "",
+    "url": "https://www.uniqlo.com/us/en/member",
+    "selector_used": "li",
+    "all_text": "My Account",
+    "has_useful_content": "My Account",
+    "index": 0
+  },
+  {
+    "name": "Store Locator",
+    "price": "",
+    "image": "",
+    "url": "https://map.uniqlo.com/us/en/",
+    "selector_used": "li",
+    "all_text": "Store Locator",
+    "has_useful_content": "Store Locator",
+    "index": 1
+  },
+  {
+    "name": "Exchanges & Returns",
+    "price": "",
+    "image": "",
+    "url": "https://faq-us.uniqlo.com/articles/en_US/FAQ/Returns-and-Exchanges/?l=en_US&c=category_uq_us%3AUQ_C1_7&fs=Search&pn=1",
+    "selector_used": "li",
+    "all_text": "Exchanges & Returns",
+    "has_useful_content": "Exchanges & Returns",
+    "index": 2
+  },
+  {
+    "name": "Gift Card",
+    "price": "",
+    "image": "",
+    "url": "https://www.uniqlo.com/us/en/special-feature/gift/gift-card",
+    "selector_used": "li",
+    "all_text": "Gift Card",
+    "has_useful_content": "Gift Card",
+    "index": 3
+  },
+  {
+    "name": "Contact Us & FAQ",
+    "price": "",
+    "image": "",
+    "url": "https://faq-us.uniqlo.com/",
+    "selector_used": "li",
+    "all_text": "Contact Us & FAQ",
+    "has_useful_content": "Contact Us & FAQ",
+    "index": 4
+  },
+  {
+    "name": "Company",
+    "price": "",
+    "image": "",
+    "url": "https://www.uniqlo.com/us/en/information",
+    "selector_used": "li",
+    "all_text": "Company",
+    "has_useful_content": "Company",
+    "index": 5
+  },
+  {
+    "name": "Sustainability",
+    "price": "",
+    "image": "",
+    "url": "https://www.uniqlo.com/us/en/spl/sustainability",
+    "selector_used": "li",
+    "all_text": "Sustainability",
+    "has_useful_content": "Sustainability",
+    "index": 6
+  },
+  {
+    "name": "Careers",
+    "price": "",
+    "image": "",
+    "url": "https://www.fastretailing.com/employment/en/",
+    "selector_used": "li",
+    "all_text": "Careers",
+    "has_useful_content": "Careers",
+    "index": 7
+  },
+  {
+    "name": "UNIQLO App",
+    "price": "",
+    "image": "",
+    "url": "https://www.uniqlo.com/us/en/special-feature/app",
+    "selector_used": "li",
+    "all_text": "UNIQLO App",
+    "has_useful_content": "UNIQLO App",
+    "index": 8
+  },
+  {
+    "name": "GU",
+    "price": "",
+    "image": "",
+    "url": "https://www.gu-global.com/jp/ja/special-feature/us",
+    "selector_used": "li",
+    "all_text": "GU",
+    "has_useful_content": "GU",
+    "index": 9
+  },
+  {
+    "name": "Theory",
+    "price": "",
+    "image": "",
+    "url": "https://www.theory.com/",
+    "selector_used": "li",
+    "all_text": "Theory",
+    "has_useful_content": "Theory",
+    "index": 10
+  },
+  {
+    "name": "Helmut Lang",
+    "price": "",
+    "image": "",
+    "url": "https://www.helmutlang.com/",
+    "selector_used": "li",
+    "all_text": "Helmut Lang",
+    "has_useful_content": "Helmut Lang",
+    "index": 11
+  },
+  {
+    "name": "Accessibility",
+    "price": "",
+    "image": "",
+    "url": "https://faq-us.uniqlo.com/articles/en_US/FAQ/Accessibility-Your-Protection/",
+    "selector_used": "li",
+    "all_text": "Accessibility",
+    "has_useful_content": "Accessibility",
+    "index": 12
+  },
+  {
+    "name": "Terms & Conditions",
+    "price": "",
+    "image": "",
+    "url": "https://faq-us.uniqlo.com/articles/en_US/FAQ/Terms-Conditions",
+    "selector_used": "li",
+    "all_text": "Terms & Conditions",
+    "has_useful_content": "Terms & Conditions",
+    "index": 13
+  },
+  {
+    "name": "Privacy Policy",
+    "price": "",
+    "image": "",
+    "url": "https://faq-us.uniqlo.com/articles/en_US/FAQ/Site-Privacy-Policy",
+    "selector_used": "li",
+    "all_text": "Privacy Policy",
+    "has_useful_content": "Privacy Policy",
+    "index": 14
+  },
+  {
+    "name": "CCPA Your Rights and Choices",
+    "price": "",
+    "image": "",
+    "url": "https://faq-us.uniqlo.com/articles/en_US/FAQ/CCPA-Your-Rights-and-Choices/",
+    "selector_used": "li",
+    "all_text": "CCPA Your Rights and Choices",
+    "has_useful_content": "CCPA Your Rights and Choices",
+    "index": 15
+  },
+  {
+    "name": "",
+    "price": "",
+    "image": "",
+    "url": "",
+    "selector_used": "li",
+    "all_text": "Copyright © UNIQLO Co., Ltd. All rights reserved.",
+    "has_useful_content": true,
+    "index": 16
+  },
+  {
+    "name": "",
+    "price": "",
+    "image": "https://asset.uniqlo.com/g/icons/facebook_v2.svg",
+    "url": "https://www.facebook.com/uniqlo.us/",
+    "selector_used": "li",
+    "all_text": "",
+    "has_useful_content": "https://www.facebook.com/uniqlo.us/",
+    "index": 17
+  },
+  {
+    "name": "",
+    "price": "",
+    "image": "https://asset.uniqlo.com/g/icons/twitter_v2.svg",
+    "url": "https://twitter.com/uniqlousa",
+    "selector_used": "li",
+    "all_text": "",
+    "has_useful_content": "https://twitter.com/uniqlousa",
+    "index": 18
+  },
+  {
+    "name": "",
+    "price": "",
+    "image": "https://asset.uniqlo.com/g/icons/instagram_v2.svg",
+    "url": "https://www.instagram.com/uniqlousa/",
+    "selector_used": "li",
+    "all_text": "",
+    "has_useful_content": "https://www.instagram.com/uniqlousa/",
+    "index": 19
+  }
+]

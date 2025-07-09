@@ -1,0 +1,1327 @@
+[
+  {
+    "text": "Limited-Time Offers",
+    "href": "https://www.uniqlo.com/us/en/feature/limited-offers/women",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Sale",
+    "href": "https://www.uniqlo.com/us/en/feature/sale/women",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "New Arrivals",
+    "href": "https://www.uniqlo.com/us/en/feature/new/women",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Coming Soon",
+    "href": "https://www.uniqlo.com/us/en/feature/coming-soon/women",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Best Sellers",
+    "href": "https://www.uniqlo.com/us/en/spl/ranking/women",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Online Exclusives",
+    "href": "https://www.uniqlo.com/us/en/feature/online-exclusive/women",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "T-Shirts",
+    "href": "https://www.uniqlo.com/us/en/women/tops/t-shirts",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Bra Tops",
+    "href": "https://www.uniqlo.com/us/en/women/tops/bra-tops",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Sweatshirts & Hoodies",
+    "href": "https://www.uniqlo.com/us/en/women/tops/sweatshirts-and-hoodies",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "UT: Graphic Tees",
+    "href": "https://www.uniqlo.com/us/en/women/tops/ut-graphic-tees",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "PEACE FOR ALL",
+    "href": "https://www.uniqlo.com/us/en/women/tops/peace-for-all",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Fleece",
+    "href": "https://www.uniqlo.com/us/en/women/tops/fleece",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All T-Shirts, Bra Tops & Sweats",
+    "href": "https://www.uniqlo.com/us/en/women/tops",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Shirts & Blouses",
+    "href": "https://www.uniqlo.com/us/en/women/shirts-and-blouses/shirts-and-blouses",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Shirts & Blouses",
+    "href": "https://www.uniqlo.com/us/en/women/shirts-and-blouses",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Sweaters",
+    "href": "https://www.uniqlo.com/us/en/women/sweaters/sweaters",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Cardigans",
+    "href": "https://www.uniqlo.com/us/en/women/sweaters/cardigans",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Sweaters & Cardigans",
+    "href": "https://www.uniqlo.com/us/en/women/sweaters",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Shorts",
+    "href": "https://www.uniqlo.com/us/en/women/bottoms/shorts",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Casual Pants",
+    "href": "https://www.uniqlo.com/us/en/women/bottoms/casual-pants",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Jeans",
+    "href": "https://www.uniqlo.com/us/en/women/bottoms/jeans",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Skirts",
+    "href": "https://www.uniqlo.com/us/en/women/bottoms/skirts",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Wide Leg Pants",
+    "href": "https://www.uniqlo.com/us/en/women/bottoms/wide-leg-pants",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Dress Pants",
+    "href": "https://www.uniqlo.com/us/en/women/bottoms/dress-pants",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Ankle Pants & Cropped Pants",
+    "href": "https://www.uniqlo.com/us/en/women/bottoms/ankle-pants-and-cropped-pants",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Sweatpants",
+    "href": "https://www.uniqlo.com/us/en/women/bottoms/sweatpants",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Legging Pants",
+    "href": "https://www.uniqlo.com/us/en/women/bottoms/leggings-pants-and-jeggings",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Bottoms",
+    "href": "https://www.uniqlo.com/us/en/women/bottoms",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Dresses & Jumpsuits",
+    "href": "https://www.uniqlo.com/us/en/women/dresses-and-skirts/dresses-and-jumpsuits",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Skirts",
+    "href": "https://www.uniqlo.com/us/en/women/dresses-and-skirts/skirts",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Dresses & Skirts",
+    "href": "https://www.uniqlo.com/us/en/women/dresses-and-skirts",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Jackets & Parkas",
+    "href": "https://www.uniqlo.com/us/en/women/outerwear-and-blazers/jackets-and-parkas",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Blazers",
+    "href": "https://www.uniqlo.com/us/en/women/outerwear-and-blazers/blazers",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Coats",
+    "href": "https://www.uniqlo.com/us/en/women/outerwear-and-blazers/coats",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Ultra Light Down & PUFFTECH",
+    "href": "https://www.uniqlo.com/us/en/women/outerwear-and-blazers/ultra-light-down",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Down Jackets & Coats",
+    "href": "https://www.uniqlo.com/us/en/women/outerwear-and-blazers/down-jackets-and-coats",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Outerwear",
+    "href": "https://www.uniqlo.com/us/en/women/outerwear-and-blazers",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Bras",
+    "href": "https://www.uniqlo.com/us/en/women/innerwear/bras",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Bra Tops",
+    "href": "https://www.uniqlo.com/us/en/women/innerwear/bra-tops",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Underwear",
+    "href": "https://www.uniqlo.com/us/en/women/innerwear/underwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Leggings & Tights",
+    "href": "https://www.uniqlo.com/us/en/women/innerwear/leggings-and-tights",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Socks",
+    "href": "https://www.uniqlo.com/us/en/women/innerwear/socks",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "AIRism",
+    "href": "https://www.uniqlo.com/us/en/women/innerwear/airism-innerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "HEATTECH",
+    "href": "https://www.uniqlo.com/us/en/women/innerwear/heattech",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Innerwear & Underwear",
+    "href": "https://www.uniqlo.com/us/en/women/innerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Loungewear & Pajamas",
+    "href": "https://www.uniqlo.com/us/en/women/loungewear-and-home/loungewear-and-pajamas",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Loungewear & Home",
+    "href": "https://www.uniqlo.com/us/en/women/loungewear-and-home",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Bags",
+    "href": "https://www.uniqlo.com/us/en/women/accessories-and-shoes/bags",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Hats & Caps",
+    "href": "https://www.uniqlo.com/us/en/women/accessories-and-shoes/hats-and-caps",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Belts",
+    "href": "https://www.uniqlo.com/us/en/women/accessories-and-shoes/belts",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Sunglasses",
+    "href": "https://www.uniqlo.com/us/en/women/accessories-and-shoes/sunglasses",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Shoes & Sandals",
+    "href": "https://www.uniqlo.com/us/en/women/accessories-and-shoes/shoes",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Others",
+    "href": "https://www.uniqlo.com/us/en/women/accessories-and-shoes/others",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Accessories",
+    "href": "https://www.uniqlo.com/us/en/women/accessories-and-shoes",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Bottoms",
+    "href": "https://www.uniqlo.com/us/en/women/linen/bottoms",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Tops",
+    "href": "https://www.uniqlo.com/us/en/women/linen/tops",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Dresses & Skirts",
+    "href": "https://www.uniqlo.com/us/en/women/linen/dresses-and-skirts",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Linen",
+    "href": "https://www.uniqlo.com/us/en/women/linen",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Innerwear",
+    "href": "https://www.uniqlo.com/us/en/women/airism/innerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Tops",
+    "href": "https://www.uniqlo.com/us/en/women/airism/tops",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Bottoms",
+    "href": "https://www.uniqlo.com/us/en/women/airism/bottoms",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Dresses",
+    "href": "https://www.uniqlo.com/us/en/women/airism/dresses",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Loungewear",
+    "href": "https://www.uniqlo.com/us/en/women/airism/loungewear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All AIRism",
+    "href": "https://www.uniqlo.com/us/en/women/airism",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Bottoms",
+    "href": "https://www.uniqlo.com/us/en/women/sport-utility-wear/bottoms",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Tops",
+    "href": "https://www.uniqlo.com/us/en/women/sport-utility-wear/tops",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Outerwear",
+    "href": "https://www.uniqlo.com/us/en/women/sport-utility-wear/outerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Innerwear",
+    "href": "https://www.uniqlo.com/us/en/women/sport-utility-wear/innerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Accessories",
+    "href": "https://www.uniqlo.com/us/en/women/sport-utility-wear/accessories",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Sport Utility Wear",
+    "href": "https://www.uniqlo.com/us/en/women/sport-utility-wear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Outerwear",
+    "href": "https://www.uniqlo.com/us/en/women/uv-protection/outerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Tops",
+    "href": "https://www.uniqlo.com/us/en/women/uv-protection/tops",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Bottoms",
+    "href": "https://www.uniqlo.com/us/en/women/uv-protection/bottoms",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Accessories",
+    "href": "https://www.uniqlo.com/us/en/women/uv-protection/accessories",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All UV Protection",
+    "href": "https://www.uniqlo.com/us/en/women/uv-protection",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "HEATTECH",
+    "href": "https://www.uniqlo.com/us/en/women/heattech/heattech",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "HEATTECH Cashmere Blend",
+    "href": "https://www.uniqlo.com/us/en/women/heattech/heattech-cashmere-blend",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "HEATTECH Extra Warm",
+    "href": "https://www.uniqlo.com/us/en/women/heattech/heattech-extra-warm",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "HEATTECH Ultra Warm",
+    "href": "https://www.uniqlo.com/us/en/women/heattech/heattech-ultra-warm",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Tops",
+    "href": "https://www.uniqlo.com/us/en/women/heattech/tops",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Bottoms",
+    "href": "https://www.uniqlo.com/us/en/women/heattech/bottoms",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Accessories",
+    "href": "https://www.uniqlo.com/us/en/women/heattech/accessories",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Socks",
+    "href": "https://www.uniqlo.com/us/en/women/heattech/innerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All HEATTECH",
+    "href": "https://www.uniqlo.com/us/en/women/heattech",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Uniqlo U",
+    "href": "https://www.uniqlo.com/us/en/women/special-collaboration/uniqlo-u",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "UNIQLO : C",
+    "href": "https://www.uniqlo.com/us/en/women/special-collaboration/uniqlo-c",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "UNIQLO and JW ANDERSON",
+    "href": "https://www.uniqlo.com/us/en/women/special-collaboration/uniqlo-and-jw-anderson",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "UNIQLO and COMPTOIR DES COTONNIERS",
+    "href": "https://www.uniqlo.com/us/en/women/special-collaboration/uniqlo-and-comptoir-des-cotonniers",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "UNIQLO and PRINCESSE tam tam",
+    "href": "https://www.uniqlo.com/us/en/women/special-collaboration/uniqlo-and-princesse-tam-tam",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "UNIQLO x Marimekko",
+    "href": "https://www.uniqlo.com/us/en/women/special-collaboration/uniqlo-x-marimekko",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Special Collaborations",
+    "href": "https://www.uniqlo.com/us/en/women/special-collaboration",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "LifeWear Magazine Issue 12Sunny Moments",
+    "href": "https://www.uniqlo.com/us/en/contents/lifewear-magazine/",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "UTme!Design your own t-shirts.",
+    "href": "https://www.uniqlo.com/us/en/spl/ut-me",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Back to College",
+    "href": "https://www.uniqlo.com/us/en/spl/back-to-school/women",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Summer Edit",
+    "href": "https://www.uniqlo.com/us/en/spl/cp/summer-edit/women",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Matching Sets",
+    "href": "https://www.uniqlo.com/us/en/spl/product-listings/matching-sets/women",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "AirSense Jackets & Pants",
+    "href": "https://www.uniqlo.com/us/en/spl/airsense",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Styling Book",
+    "href": "https://www.uniqlo.com/us/en/stylingbook/officialstyling/women",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "StyleHint",
+    "href": "https://www.uniqlo.com/us/en/stylingbook/stylehint/women",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Limited-Time Offers",
+    "href": "https://www.uniqlo.com/us/en/feature/limited-offers/men",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Sale",
+    "href": "https://www.uniqlo.com/us/en/feature/sale/men",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Best Sellers",
+    "href": "https://www.uniqlo.com/us/en/spl/ranking/men",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "New Arrivals",
+    "href": "https://www.uniqlo.com/us/en/feature/new/men",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Coming Soon",
+    "href": "https://www.uniqlo.com/us/en/feature/coming-soon/men",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Online Exclusives",
+    "href": "https://www.uniqlo.com/us/en/feature/online-exclusive/men",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "T-Shirts",
+    "href": "https://www.uniqlo.com/us/en/men/tops/t-shirts",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Sweatshirts & Hoodies",
+    "href": "https://www.uniqlo.com/us/en/men/tops/sweatshirts-and-hoodies",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "UT: Graphic Tees",
+    "href": "https://www.uniqlo.com/us/en/men/tops/ut-graphic-tees",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "PEACE FOR ALL",
+    "href": "https://www.uniqlo.com/us/en/men/tops/peace-for-all",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Fleece",
+    "href": "https://www.uniqlo.com/us/en/men/tops/fleece",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All T-Shirts & Sweats",
+    "href": "https://www.uniqlo.com/us/en/men/tops",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Casual Shirts",
+    "href": "https://www.uniqlo.com/us/en/men/shirts-and-polos/casual-shirts",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Polo Shirts",
+    "href": "https://www.uniqlo.com/us/en/men/shirts-and-polos/polo-shirts",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Dress Shirts",
+    "href": "https://www.uniqlo.com/us/en/men/shirts-and-polos/dress-shirts",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Shirts & Polos",
+    "href": "https://www.uniqlo.com/us/en/men/shirts-and-polos",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Sweaters & Cardigans",
+    "href": "https://www.uniqlo.com/us/en/men/sweaters/sweaters-and-cardigans",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Sweaters & Cardigans",
+    "href": "https://www.uniqlo.com/us/en/men/sweaters",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Shorts",
+    "href": "https://www.uniqlo.com/us/en/men/bottoms/shorts",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Casual Pants",
+    "href": "https://www.uniqlo.com/us/en/men/bottoms/casual-pants",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Jeans",
+    "href": "https://www.uniqlo.com/us/en/men/bottoms/jeans",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Dress Pants",
+    "href": "https://www.uniqlo.com/us/en/men/bottoms/dress-pants",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Chinos",
+    "href": "https://www.uniqlo.com/us/en/men/bottoms/chinos",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Wide Leg Pants",
+    "href": "https://www.uniqlo.com/us/en/men/bottoms/wide-leg-pants",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Sweatpants",
+    "href": "https://www.uniqlo.com/us/en/men/bottoms/sweatpants",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Ankle Pants",
+    "href": "https://www.uniqlo.com/us/en/men/bottoms/ankle-pants",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Bottoms",
+    "href": "https://www.uniqlo.com/us/en/men/bottoms",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Jackets & Parkas",
+    "href": "https://www.uniqlo.com/us/en/men/outerwear-and-blazers/jackets-and-parkas",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Blazers",
+    "href": "https://www.uniqlo.com/us/en/men/outerwear-and-blazers/blazers",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Coats",
+    "href": "https://www.uniqlo.com/us/en/men/outerwear-and-blazers/coats",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Ultra Light Down & PUFFTECH",
+    "href": "https://www.uniqlo.com/us/en/men/outerwear-and-blazers/ultra-light-down",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Down Jackets & Coats",
+    "href": "https://www.uniqlo.com/us/en/men/outerwear-and-blazers/down-jackets-and-coats",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Outerwear",
+    "href": "https://www.uniqlo.com/us/en/men/outerwear-and-blazers",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Boxers & Briefs",
+    "href": "https://www.uniqlo.com/us/en/men/innerwear/boxers-and-briefs",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Socks",
+    "href": "https://www.uniqlo.com/us/en/men/innerwear/socks",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Leggings & Tights",
+    "href": "https://www.uniqlo.com/us/en/men/innerwear/leggings-and-tights",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "AIRism",
+    "href": "https://www.uniqlo.com/us/en/men/innerwear/airism",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "HEATTECH",
+    "href": "https://www.uniqlo.com/us/en/men/innerwear/heattech",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Innerwear & Underwear",
+    "href": "https://www.uniqlo.com/us/en/men/innerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Loungewear & Pajamas",
+    "href": "https://www.uniqlo.com/us/en/men/loungewear-and-home/loungewear-and-pajamas",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Loungewear & Home",
+    "href": "https://www.uniqlo.com/us/en/men/loungewear-and-home",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Bags",
+    "href": "https://www.uniqlo.com/us/en/men/accessories-and-shoes/bags",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Hats & Caps",
+    "href": "https://www.uniqlo.com/us/en/men/accessories-and-shoes/hats-and-caps",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Belts",
+    "href": "https://www.uniqlo.com/us/en/men/accessories-and-shoes/belts",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Sunglasses",
+    "href": "https://www.uniqlo.com/us/en/men/accessories-and-shoes/sunglasses",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Others",
+    "href": "https://www.uniqlo.com/us/en/men/accessories-and-shoes/others",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Accessories",
+    "href": "https://www.uniqlo.com/us/en/men/accessories-and-shoes",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Bottoms",
+    "href": "https://www.uniqlo.com/us/en/men/linen/bottoms",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Shirts",
+    "href": "https://www.uniqlo.com/us/en/men/linen/tops",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Linen",
+    "href": "https://www.uniqlo.com/us/en/men/linen",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Tops",
+    "href": "https://www.uniqlo.com/us/en/men/airism/tops",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Bottoms",
+    "href": "https://www.uniqlo.com/us/en/men/airism/bottoms",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Innerwear",
+    "href": "https://www.uniqlo.com/us/en/men/airism/innerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All AIRism",
+    "href": "https://www.uniqlo.com/us/en/men/airism",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Bottoms",
+    "href": "https://www.uniqlo.com/us/en/men/sport-utility-wear/bottoms",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Tops",
+    "href": "https://www.uniqlo.com/us/en/men/sport-utility-wear/tops",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Outerwear",
+    "href": "https://www.uniqlo.com/us/en/men/sport-utility-wear/outerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Accessories",
+    "href": "https://www.uniqlo.com/us/en/men/sport-utility-wear/accessories",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Innerwear",
+    "href": "https://www.uniqlo.com/us/en/men/sport-utility-wear/innerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Sport Utility Wear",
+    "href": "https://www.uniqlo.com/us/en/men/sport-utility-wear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Tops",
+    "href": "https://www.uniqlo.com/us/en/men/uv-protection/tops",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Bottoms",
+    "href": "https://www.uniqlo.com/us/en/men/uv-protection/bottoms",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Outerwear",
+    "href": "https://www.uniqlo.com/us/en/men/uv-protection/outerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Accessories",
+    "href": "https://www.uniqlo.com/us/en/men/uv-protection/accessories",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All UV Protection",
+    "href": "https://www.uniqlo.com/us/en/men/uv-protection",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "HEATTECH",
+    "href": "https://www.uniqlo.com/us/en/men/heattech/heattech",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "HEATTECH Extra Warm",
+    "href": "https://www.uniqlo.com/us/en/men/heattech/heattech-extra-warm",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "HEATTECH Ultra Warm",
+    "href": "https://www.uniqlo.com/us/en/men/heattech/heattech-ultra-warm",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Tops",
+    "href": "https://www.uniqlo.com/us/en/men/heattech/tops",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Bottoms",
+    "href": "https://www.uniqlo.com/us/en/men/heattech/bottoms",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Accessories",
+    "href": "https://www.uniqlo.com/us/en/men/heattech/accessories",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Socks",
+    "href": "https://www.uniqlo.com/us/en/men/heattech/innerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All HEATTECH",
+    "href": "https://www.uniqlo.com/us/en/men/heattech",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Uniqlo U",
+    "href": "https://www.uniqlo.com/us/en/men/special-collaboration/uniqlo-u",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "UNIQLO : C",
+    "href": "https://www.uniqlo.com/us/en/men/special-collaboration/uniqlo-c",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "UNIQLO and JW ANDERSON",
+    "href": "https://www.uniqlo.com/us/en/men/special-collaboration/uniqlo-and-jw-anderson",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Special Collaborations",
+    "href": "https://www.uniqlo.com/us/en/men/special-collaboration",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "The Roger Federer\nCollection",
+    "href": "https://www.uniqlo.com/us/en/special-feature/ambassador/roger-federer-collection",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "MoMA Art IconsNew Styles Arriving 7/14",
+    "href": "https://www.uniqlo.com/us/en/spl/ut/moma-art-icons",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Back to College",
+    "href": "https://www.uniqlo.com/us/en/spl/back-to-school/men",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Summer Edit",
+    "href": "https://www.uniqlo.com/us/en/spl/cp/summer-edit/men",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Matching Sets",
+    "href": "https://www.uniqlo.com/us/en/spl/product-listings/matching-sets/men",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Styling Book",
+    "href": "https://www.uniqlo.com/us/en/stylingbook/officialstyling/men",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "StyleHint",
+    "href": "https://www.uniqlo.com/us/en/stylingbook/stylehint/men",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Sale",
+    "href": "https://www.uniqlo.com/us/en/feature/sale/kids",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "New Arrivals",
+    "href": "https://www.uniqlo.com/us/en/feature/new/kids",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Coming Soon",
+    "href": "https://www.uniqlo.com/us/en/feature/coming-soon/kids",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Best Sellers",
+    "href": "https://www.uniqlo.com/us/en/spl/ranking/kids",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Online Exclusives",
+    "href": "https://www.uniqlo.com/us/en/feature/online-exclusive/kids",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "T-Shirts",
+    "href": "https://www.uniqlo.com/us/en/kids/tops/t-shirts",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "UT: Graphic Tees",
+    "href": "https://www.uniqlo.com/us/en/kids/tops/ut-graphic-tees",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Sweatshirts & Hoodies",
+    "href": "https://www.uniqlo.com/us/en/kids/tops/sweatshirts-and-hoodies",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Fleece",
+    "href": "https://www.uniqlo.com/us/en/kids/tops/fleece",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All T-Shirts & Sweats",
+    "href": "https://www.uniqlo.com/us/en/kids/tops",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Shirts & Blouses",
+    "href": "https://www.uniqlo.com/us/en/kids/shirts-and-blouses/shirts-and-blouses",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Shirts & Blouses",
+    "href": "https://www.uniqlo.com/us/en/kids/shirts-and-blouses",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Sweaters & Cardigans",
+    "href": "https://www.uniqlo.com/us/en/kids/sweaters/sweaters",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Sweaters & Cardigans",
+    "href": "https://www.uniqlo.com/us/en/kids/sweaters",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Shorts",
+    "href": "https://www.uniqlo.com/us/en/kids/bottoms/shorts",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Pants",
+    "href": "https://www.uniqlo.com/us/en/kids/bottoms/pants",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Skirts",
+    "href": "https://www.uniqlo.com/us/en/kids/bottoms/skirts",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Bottoms",
+    "href": "https://www.uniqlo.com/us/en/kids/bottoms",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Dresses",
+    "href": "https://www.uniqlo.com/us/en/kids/dresses/dresses",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Dresses",
+    "href": "https://www.uniqlo.com/us/en/kids/dresses",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Jackets & Parkas",
+    "href": "https://www.uniqlo.com/us/en/kids/outerwear-and-blazers/jackets-and-parkas",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Outerwear",
+    "href": "https://www.uniqlo.com/us/en/kids/outerwear-and-blazers",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Underwear",
+    "href": "https://www.uniqlo.com/us/en/kids/innerwear/underwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Bras & Bra Tops",
+    "href": "https://www.uniqlo.com/us/en/kids/innerwear/bras-and-bra-top",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Leggings & Tights",
+    "href": "https://www.uniqlo.com/us/en/kids/innerwear/leggings-and-tights",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Socks",
+    "href": "https://www.uniqlo.com/us/en/kids/innerwear/socks",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "AIRism",
+    "href": "https://www.uniqlo.com/us/en/kids/innerwear/airism",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "HEATTECH",
+    "href": "https://www.uniqlo.com/us/en/kids/innerwear/heattech",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Innerwear & Underwear",
+    "href": "https://www.uniqlo.com/us/en/kids/innerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Accessories",
+    "href": "https://www.uniqlo.com/us/en/kids/accessories/other",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Accessories",
+    "href": "https://www.uniqlo.com/us/en/kids/accessories",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Tops",
+    "href": "https://www.uniqlo.com/us/en/kids/airism/tops",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Bottoms",
+    "href": "https://www.uniqlo.com/us/en/kids/airism/bottoms",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Innerwear",
+    "href": "https://www.uniqlo.com/us/en/kids/airism/innerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All AIRism",
+    "href": "https://www.uniqlo.com/us/en/kids/airism",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Outerwear",
+    "href": "https://www.uniqlo.com/us/en/kids/sport-utility-wear/outerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Tops",
+    "href": "https://www.uniqlo.com/us/en/kids/sport-utility-wear/tops",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Bottoms",
+    "href": "https://www.uniqlo.com/us/en/kids/sport-utility-wear/bottoms",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Innerwear",
+    "href": "https://www.uniqlo.com/us/en/kids/sport-utility-wear/innerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Sport Utility Wear",
+    "href": "https://www.uniqlo.com/us/en/kids/sport-utility-wear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Outerwear",
+    "href": "https://www.uniqlo.com/us/en/kids/uv-protection/outerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All UV Protection",
+    "href": "https://www.uniqlo.com/us/en/kids/uv-protection",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "HEATTECH Extra Warm Innerwear",
+    "href": "https://www.uniqlo.com/us/en/kids/heattech/heattech-extra-warm",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "HEATTECH Ultra Warm Innerwear",
+    "href": "https://www.uniqlo.com/us/en/kids/heattech/heattech-ultra-warm",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Tops",
+    "href": "https://www.uniqlo.com/us/en/kids/heattech/tops",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Bottoms",
+    "href": "https://www.uniqlo.com/us/en/kids/heattech/bottoms",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Innerwear",
+    "href": "https://www.uniqlo.com/us/en/kids/heattech/innerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All HEATTECH",
+    "href": "https://www.uniqlo.com/us/en/kids/heattech",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "UNIQLO x Marimekko",
+    "href": "https://www.uniqlo.com/us/en/kids/special-collaboration/uniqlo-x-marimekko",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Special Collaborations",
+    "href": "https://www.uniqlo.com/us/en/kids/special-collaboration",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "UT ARCHIVE Super Mario",
+    "href": "https://www.uniqlo.com/us/en/spl/ut/super-mario/kids",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Back to School",
+    "href": "https://www.uniqlo.com/us/en/spl/back-to-school/kids",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Styling Book",
+    "href": "https://www.uniqlo.com/us/en/stylingbook/officialstyling/kids",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Sale",
+    "href": "https://www.uniqlo.com/us/en/feature/sale/baby",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Best Sellers",
+    "href": "https://www.uniqlo.com/us/en/spl/ranking/baby",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "New Arrivals",
+    "href": "https://www.uniqlo.com/us/en/feature/new/baby",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Coming Soon",
+    "href": "https://www.uniqlo.com/us/en/feature/coming-soon/baby",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Bodysuits",
+    "href": "https://www.uniqlo.com/us/en/baby/newborn/bodysuits",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "One-Piece Outfits",
+    "href": "https://www.uniqlo.com/us/en/baby/newborn/one-piece-outfit",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Tops",
+    "href": "https://www.uniqlo.com/us/en/baby/newborn/tops",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Pants & Leggings",
+    "href": "https://www.uniqlo.com/us/en/baby/newborn/pants-and-leggings",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Dresses",
+    "href": "https://www.uniqlo.com/us/en/baby/newborn/dresses",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Outerwear",
+    "href": "https://www.uniqlo.com/us/en/baby/newborn/outerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Socks",
+    "href": "https://www.uniqlo.com/us/en/baby/newborn/socks",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "UT: Graphic Tees",
+    "href": "https://www.uniqlo.com/us/en/baby/newborn/ut-graphic-tees",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Accessories",
+    "href": "https://www.uniqlo.com/us/en/baby/newborn/accessories",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Newborn & Infant (0-24M)",
+    "href": "https://www.uniqlo.com/us/en/baby/newborn",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Tops",
+    "href": "https://www.uniqlo.com/us/en/baby/toddler/tops",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Pants & Leggings",
+    "href": "https://www.uniqlo.com/us/en/baby/toddler/pants-and-leggings",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Dresses",
+    "href": "https://www.uniqlo.com/us/en/baby/toddler/dresses",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Outerwear",
+    "href": "https://www.uniqlo.com/us/en/baby/toddler/outerwear",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Loungewear & Pajamas",
+    "href": "https://www.uniqlo.com/us/en/baby/toddler/loungewear-and-pajamas",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Socks",
+    "href": "https://www.uniqlo.com/us/en/baby/toddler/socks",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "UT: Graphic Tees",
+    "href": "https://www.uniqlo.com/us/en/baby/toddler/ut-graphic-tees",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Accessories",
+    "href": "https://www.uniqlo.com/us/en/baby/toddler/accessories",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "All Toddler (6M-5Y)",
+    "href": "https://www.uniqlo.com/us/en/baby/toddler",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "The Picture Book Collection",
+    "href": "https://www.uniqlo.com/us/en/spl/ut/the-picture-book-collection-noraneko-gundan",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Pokémon",
+    "href": "https://www.uniqlo.com/us/en/spl/ut/pokemon-baby",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "The Picture Book Collection",
+    "href": "https://www.uniqlo.com/us/en/spl/ut/the-picture-book-collection",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "The Picture Book Collection",
+    "href": "https://www.uniqlo.com/us/en/spl/ut/the-picture-book-collection-moomin-miffy",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Styling Book",
+    "href": "https://www.uniqlo.com/us/en/stylingbook/officialstyling/baby",
+    "selector": "nav a[href]"
+  },
+  {
+    "text": "Collection",
+    "href": "https://www.onetrust.com/products/cookie-consent/",
+    "selector": "a[href*=\"/products/\"] (collection)"
+  }
+]

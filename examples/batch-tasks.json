@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://httpbin.org/html",
+    "targets": ["page title", "main heading"],
+    "autonomous": true,
+    "timeout": 30000
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+    "targets": ["article title", "first paragraph"],
+    "autonomous": true,
+    "timeout": 45000
+  },
+  {
+    "url": "https://example.com",
+    "targets": ["page title", "main content"],
+    "autonomous": false,
+    "timeout": 20000
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "hasReact": true,
+  "hasAngular": false,
+  "hasVue": false,
+  "totalElements": 2655,
+  "divCount": 437,
+  "hasDataTestIds": 124,
+  "hasProductClass": 0,
+  "hasItemClass": 0,
+  "bodyClasses": "",
+  "scripts": 131,
+  "sampleDataTestIds": [],
+  "sampleProductClasses": [],
+  "bodyHTML": "\n                \n<div id=\"root\"><div id=\"dls-start-portal\"></div><div data-testid=\"rating-star-map\" class=\"dls-1hyfx7x\"><svg xmlns=\"http://www.w3.org/2000/svg\" id=\"full-star\" width=\"24\" height=\"24\" fill=\"none\" class=\"dls-1bev55k\"><g><path fill=\"#000\" d=\"M13.404 1.912c-.486-1.298-2.322-1.298-2.809 0l-2.3 6.133-6.543.292C.368 8.4-.2 10.145.884 11.01l5.122 4.082-1.744 6.314c-.37 1.335 1.116 2.415 2.273 1.65L12 19.446l5.465 3.61c1.157.765 2.642-.314 2.273-1.65l-1.744-6.314 5.122-4.082c1.084-.864.516-2.61-.868-2.672l-6.544-.292z\"></path></g></svg><svg xmlns=\"http://www.w3.org/2000/svg\" id=\"empty-star\" width=\"24\" height=\"24\" fill=\"none\" class=\"dls-2nzfih\"><g><path fill=\"#000\" d=\"M13.404 1.912c-.486-1.298-2.322-1.298-2.809 0l-2.3 6.133-6.543.292C.368 8.4-.2 10.145.884 11.01l5.122 4.082-1.744 6.314c-.37 1.335 1.116 2.415 2.273 1.65L12 19.446l5.465 3.61c1.157.765 2.642-.314 2.273-1.65l-1.744-6.314 5.122-4.082c1.084-.864.516-2.61-.868-2.672l-6.544-.292z\"></path></g></svg><svg id=\"star-fraction-"
+}

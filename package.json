@@ -1,0 +1,58 @@
+{
+  "name": "codesight-mcp",
+  "version": "1.0.0",
+  "description": "CodeSight - Autonomous AI Agent for Web Scraping via MCP",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "tsx src/tests/runTests.ts",
+    "test:tools": "node test-mcp-tools.js",
+    "test:autonomous": "node test-autonomous.js",
+    "test:watch": "tsx --watch src/tests/runTests.ts",
+    "monitor": "tsx src/cli/monitor.ts",
+    "monitor:health": "tsx src/cli/monitor.ts health",
+    "monitor:metrics": "tsx src/cli/monitor.ts metrics",
+    "monitor:logs": "tsx src/cli/monitor.ts logs",
+    "cli": "node cli.js",
+    "scrape": "node cli.js scrape",
+    "batch": "node cli.js batch"
+  },
+  "bin": {
+    "codesight": "./cli.js"
+  },
+  "keywords": [
+    "mcp",
+    "scraping",
+    "ai",
+    "playwright",
+    "automation"
+  ],
+  "author": "Peter Amadon",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.5.0",
+    "better-sqlite3": "^12.2.0",
+    "chalk": "^5.4.1",
+    "cheerio": "^1.1.0",
+    "commander": "^14.0.0",
+    "dotenv": "^16.0.0",
+    "inquirer": "^12.7.0",
+    "openai": "^4.0.0",
+    "ora": "^8.2.0",
+    "playwright": "^1.53.2",
+    "sqlite3": "^5.1.7",
+    "table": "^6.9.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/jest": "^29.0.0",
+    "@types/node": "^20.0.0",
+    "jest": "^29.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.8.3"
+  }
+}
